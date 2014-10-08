@@ -78,10 +78,11 @@ per-tuple CPU overhead, we decided to try an interesting idea called vectorized
 execution.
 
 [Vectorized execution](http://www.cse.ust.hk/damon2011/proceedings/p5-sompolski.pdf)
-is based on the observation that most database engines follow an iterator-based
-execution model, where each database operator implements a next() method. Each
-call to next() produces one new tuple that may in turn be passed to other
-operators. This "tuple at a time" model introduces an interpretation overhead
+was popularized by the [MonetDB/X100](http://oai.cwi.nl/oai/asset/16497/16497B.pdf)
+team. This idea is based on the observation that most database engines follow an 
+iterator-based execution model, where each database operator implements a next() 
+method. Each call to next() produces one new tuple that may in turn be passed to 
+other operators. This "tuple at a time" model introduces an interpretation overhead
 and also adversely affects high performance features in modern CPUs. Vectorized
 execution reduces these overheads by using bulk processing. In this new model,
 rather than producing one tuple on each call, next() operates on and produces a
