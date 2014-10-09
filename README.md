@@ -315,9 +315,10 @@ then we currently don't support vectorization for it.
 
 The current set of vectorized queries are limited to simple aggregates (sum,
 count, avg) and aggregates with group bys. The next set of changes I wanted to
-incorporate into the vectorized executor are: filter clauses, expressions within
-aggregate functions, groups by that support multiple columns or aggregates, and
-passing vectorized tuples from groupings to order by clauses.
+incorporate into the vectorized executor are: filter clauses, functions or
+expressions, expressions within aggregate functions, groups by that support 
+multiple columns or aggregates, and passing vectorized tuples from groupings to 
+order by clauses.
 
 I think all except the last one are relatively easy, but I didn't have the time
 to work on them. The last one is harder as PostgreSQL's query planner follows
