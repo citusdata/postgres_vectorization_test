@@ -201,8 +201,8 @@ installation's bin/ directory path. For example:
     PATH=/usr/local/pgsql/bin/:$PATH make
     sudo PATH=/usr/local/pgsql/bin/:$PATH make install
 
-**Note.** cstore_fdw requires PostgreSQL 9.3 or 9.4. It doesn't support earlier
-versions of PostgreSQL.
+**Note.** postgres_vectorization_test requires PostgreSQL 9.3. It doesn't support 
+other versions of PostgreSQL.
 
 Before using cstore\_fdw, you also need to add it to ```shared_preload_libraries```
 in your ```postgresql.conf``` and restart Postgres:
